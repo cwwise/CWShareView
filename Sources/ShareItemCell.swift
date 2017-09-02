@@ -9,9 +9,12 @@
 import UIKit
 
 class ShareItemCell: UICollectionViewCell {
+    /// 按钮
+    var iconButton: UIButton
+    /// 文字
+    var titleLable: UILabel
     
-    var iconButton: UIButton!
-    var titleLable: UILabel!
+    var cellClicked: ((ShareItemCell) -> Void)?
     
     var shareItem: ShareItem! {
         didSet {
@@ -20,32 +23,49 @@ class ShareItemCell: UICollectionViewCell {
     }
     
     override init(frame: CGRect) {
+       
+        titleLable = UILabel()
+        iconButton = UIButton(type: .custom)
         super.init(frame: frame)
         
-        titleLable = UILabel()
         titleLable.numberOfLines = 2
-        titleLable.font = UIFont.systemFont(ofSize: 12)
+        titleLable.font = UIFont.systemFont(ofSize: 11)
         titleLable.textColor = UIColor.darkGray
-        self.contentView.addSubview(titleLable)
-        
-        iconButton = UIButton(type: .custom)
+        titleLable.textAlignment = .center
+        contentView.addSubview(titleLable)
+                
         iconButton.addTarget(self, action: #selector(iconButtonClick), for: .touchUpInside)
-        self.contentView.addSubview(iconButton)
+        contentView.addSubview(iconButton)
     }
     
     func setupInfo() {
         titleLable.text = shareItem.title
-        iconButton.setImage(UIImage(named: shareItem.icon), for: .normal)
+        iconButton.setImage(shareItem.icon, for: .normal)
     }
     
     override func layoutSubviews() {
+        super.layoutSubviews()
         
+        let contentWidth = self.frame.width
+        let iconButtonSize = shareItem.icon.size
+        iconButton.frame = CGRect(x: (contentWidth-iconButtonSize.width)/2, 
+                                  y: 0,
+                                  width: iconButtonSize.width, 
+                                  height: iconButtonSize.height)
+   
+        let size = titleLable.sizeThatFits(CGSize(width: contentWidth, height: CGFloat.greatestFiniteMagnitude))
+        titleLable.frame = CGRect(x: 0, y: iconButtonSize.height+8, 
+                                  width: contentWidth, height: ceil(size.height))
     }
     
     // MARK: Action
     func iconButtonClick() {
-        if let selectionHandler = shareItem.selectionHandler {
+        if let shareItem = shareItem, let selectionHandler = shareItem.selectionHandler {
             selectionHandler(shareItem)
+        }
+        
+        if let cellClicked = cellClicked {
+            cellClicked(self)
         }
     }
     

@@ -8,16 +8,19 @@
 
 import UIKit
 
+public typealias SelectionHandler = ((ShareItem) -> Void)
+
 public class ShareItem: NSObject {
+    /// 标题
+    public var title: String
+    /// 图片名称
+    public var icon: UIImage
+    /// 点击事件
+    public var selectionHandler: SelectionHandler?
     
-    typealias SelectionHandler = ((_ item: ShareItem) -> Void)
-    
-    var title: String
-    var icon: String
-    var selectionHandler: SelectionHandler?
-    
-    init(title: String, icon: String) {
+    public init(title: String, icon: UIImage, selectionHandler: SelectionHandler? = nil) {
         self.title = title
         self.icon = icon
+        self.selectionHandler = selectionHandler
     }
 }

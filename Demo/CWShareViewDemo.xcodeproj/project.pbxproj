@@ -11,14 +11,16 @@
 		1FF3488D1F58F14500BD0112 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FF3488C1F58F14500BD0112 /* ViewController.swift */; };
 		1FF348901F58F14500BD0112 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1FF3488E1F58F14500BD0112 /* Main.storyboard */; };
 		1FF348921F58F14500BD0112 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1FF348911F58F14500BD0112 /* Assets.xcassets */; };
-		1FF348951F58F14500BD0112 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1FF348931F58F14500BD0112 /* LaunchScreen.storyboard */; };
 		1FF348A01F58F14500BD0112 /* CWShareViewDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FF3489F1F58F14500BD0112 /* CWShareViewDemoTests.swift */; };
 		1FF348BD1F58F1AB00BD0112 /* CWShareView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FF348B61F58F1AB00BD0112 /* CWShareView.framework */; };
 		1FF348BE1F58F1AB00BD0112 /* CWShareView.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1FF348B61F58F1AB00BD0112 /* CWShareView.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		1FF348C81F58F1D400BD0112 /* ShareItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FF348C41F58F1D400BD0112 /* ShareItem.swift */; };
-		1FF348C91F58F1D400BD0112 /* CWShareView.h in Headers */ = {isa = PBXBuildFile; fileRef = 1FF348C51F58F1D400BD0112 /* CWShareView.h */; };
+		1FF348C91F58F1D400BD0112 /* CWShareView.h in Headers */ = {isa = PBXBuildFile; fileRef = 1FF348C51F58F1D400BD0112 /* CWShareView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1FF348CA1F58F1D400BD0112 /* ShareView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FF348C61F58F1D400BD0112 /* ShareView.swift */; };
 		1FF348CB1F58F1D400BD0112 /* ShareItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FF348C71F58F1D400BD0112 /* ShareItemCell.swift */; };
+		1FF348D31F59258300BD0112 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1FF348D21F59258300BD0112 /* LaunchScreen.storyboard */; };
+		1FF348D91F599AE400BD0112 /* ShareSheetCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FF348D81F599AE400BD0112 /* ShareSheetCell.swift */; };
+		1FF348E31F5A4F2600BD0112 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FF348E21F5A4F2600BD0112 /* WebViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,7 +60,6 @@
 		1FF3488C1F58F14500BD0112 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		1FF3488F1F58F14500BD0112 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1FF348911F58F14500BD0112 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		1FF348941F58F14500BD0112 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1FF348961F58F14500BD0112 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1FF3489B1F58F14500BD0112 /* CWShareViewDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CWShareViewDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1FF3489F1F58F14500BD0112 /* CWShareViewDemoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CWShareViewDemoTests.swift; sourceTree = "<group>"; };
@@ -69,6 +70,9 @@
 		1FF348C51F58F1D400BD0112 /* CWShareView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CWShareView.h; sourceTree = "<group>"; };
 		1FF348C61F58F1D400BD0112 /* ShareView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShareView.swift; sourceTree = "<group>"; };
 		1FF348C71F58F1D400BD0112 /* ShareItemCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShareItemCell.swift; sourceTree = "<group>"; };
+		1FF348D21F59258300BD0112 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		1FF348D81F599AE400BD0112 /* ShareSheetCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShareSheetCell.swift; sourceTree = "<group>"; };
+		1FF348E21F5A4F2600BD0112 /* WebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,9 +126,10 @@
 			children = (
 				1FF3488A1F58F14500BD0112 /* AppDelegate.swift */,
 				1FF3488C1F58F14500BD0112 /* ViewController.swift */,
+				1FF348E21F5A4F2600BD0112 /* WebViewController.swift */,
 				1FF3488E1F58F14500BD0112 /* Main.storyboard */,
+				1FF348D21F59258300BD0112 /* LaunchScreen.storyboard */,
 				1FF348911F58F14500BD0112 /* Assets.xcassets */,
-				1FF348931F58F14500BD0112 /* LaunchScreen.storyboard */,
 				1FF348961F58F14500BD0112 /* Info.plist */,
 			);
 			path = CWShareViewDemo;
@@ -152,9 +157,10 @@
 			isa = PBXGroup;
 			children = (
 				1FF348C51F58F1D400BD0112 /* CWShareView.h */,
-				1FF348C41F58F1D400BD0112 /* ShareItem.swift */,
 				1FF348C61F58F1D400BD0112 /* ShareView.swift */,
+				1FF348D81F599AE400BD0112 /* ShareSheetCell.swift */,
 				1FF348C71F58F1D400BD0112 /* ShareItemCell.swift */,
+				1FF348C41F58F1D400BD0112 /* ShareItem.swift */,
 			);
 			name = Sources;
 			path = ../../Sources;
@@ -279,8 +285,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1FF348951F58F14500BD0112 /* LaunchScreen.storyboard in Resources */,
 				1FF348921F58F14500BD0112 /* Assets.xcassets in Resources */,
+				1FF348D31F59258300BD0112 /* LaunchScreen.storyboard in Resources */,
 				1FF348901F58F14500BD0112 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -307,6 +313,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1FF3488D1F58F14500BD0112 /* ViewController.swift in Sources */,
+				1FF348E31F5A4F2600BD0112 /* WebViewController.swift in Sources */,
 				1FF3488B1F58F14500BD0112 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -326,6 +333,7 @@
 				1FF348CA1F58F1D400BD0112 /* ShareView.swift in Sources */,
 				1FF348C81F58F1D400BD0112 /* ShareItem.swift in Sources */,
 				1FF348CB1F58F1D400BD0112 /* ShareItemCell.swift in Sources */,
+				1FF348D91F599AE400BD0112 /* ShareSheetCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -351,14 +359,6 @@
 				1FF3488F1F58F14500BD0112 /* Base */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		1FF348931F58F14500BD0112 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				1FF348941F58F14500BD0112 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -462,6 +462,10 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/CWShareViewDemo",
+				);
 				INFOPLIST_FILE = CWShareViewDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.cwwise.CWShareViewDemo;
@@ -475,6 +479,10 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/CWShareViewDemo",
+				);
 				INFOPLIST_FILE = CWShareViewDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.cwwise.CWShareViewDemo;
@@ -592,6 +600,7 @@
 				1FF348C11F58F1AB00BD0112 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
