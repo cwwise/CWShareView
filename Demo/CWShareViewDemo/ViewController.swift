@@ -51,7 +51,10 @@ class ViewController: UIViewController {
             print(indexPath.section, indexPath.row)
         }
         
-        let shareView = ShareView(shareItems: [shareList1, shareList2], clickedHandler: clickedHandler)        
+        let title = "网页由mp.weixin.qq.com提供"
+        let shareView = ShareView(title: title,
+                                  shareItems: [shareList1, shareList2], 
+                                  clickedHandler: clickedHandler)        
         shareView.show()
     }
 
@@ -61,8 +64,6 @@ class ViewController: UIViewController {
         }
         
         let shareView = ShareView(squareItems: shareList1, clickedHandler: clickedHandler)        
-        shareView.headerView = nil
-   
         shareView.show()
     }
     override func didReceiveMemoryWarning() {

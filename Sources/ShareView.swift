@@ -8,11 +8,6 @@
 
 import UIKit
 
-struct ShareViewConfigure {
-    var itemSize = CGSize(width: 80, height: 80)
-
-}
-
 let kSheetCellHeight: CGFloat = 130
 let kItemSize = CGSize(width: 72, height: 100)
 
@@ -39,15 +34,13 @@ public class ShareView: UIView {
     
     public var footerView: UIView?
     
-    fileprivate var backgroundView: UIView
-    
     public var collectionViewLayout: UICollectionViewFlowLayout!
 
+    fileprivate var backgroundView: UIView
+    
     fileprivate var collectionView: UICollectionView!
     
     fileprivate var type: ShareViewType = .normal
-    /// 标题
-    public var title: String?
             
     public var animationDuration: TimeInterval
     /// 点击事件
@@ -68,10 +61,16 @@ public class ShareView: UIView {
         setupUI()
     }
     
-    public convenience init(shareItems: [[ShareItem]], clickedHandler: ShareViewClickedHandler? = nil) {
+    public convenience init(title: String? = nil, 
+                            shareItems: [[ShareItem]], 
+                            clickedHandler: ShareViewClickedHandler? = nil) {
         self.init()
+        
         self.shareItems = shareItems
         self.clickedHandler = clickedHandler
+        if let title = title {
+            headerView = defaultHeaderView(with: title)   
+        }
     }
     
     public convenience init(squareItems: [ShareItem], clickedHandler: ShareViewClickedHandler? = nil) {
@@ -100,7 +99,6 @@ public class ShareView: UIView {
         addSubview(containerView)
         
         // 默认布局
-        headerView = defaultHeaderView()      
         footerView = defaultFooterView()  
         
         collectionViewLayout = UICollectionViewFlowLayout()
@@ -123,7 +121,7 @@ public class ShareView: UIView {
     }
     
     // MARK: Header && Footer
-    func defaultHeaderView() -> UIView {
+    func defaultHeaderView(with title: String) -> UIView {
         
         let contentWidth = self.frame.width
         let headerView = UIView()
@@ -134,10 +132,9 @@ public class ShareView: UIView {
         titleLabel.textAlignment = .center
         titleLabel.font = UIFont.systemFont(ofSize: 11)
         titleLabel.frame = CGRect(x: 0, y: 13, width: contentWidth, height: 15)
-        titleLabel.text = "网页由mp.weixin.qq.com提供"
+        titleLabel.text = title
         
         headerView.addSubview(titleLabel)
-        
         return headerView
     }
     
