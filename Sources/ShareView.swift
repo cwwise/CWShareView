@@ -159,13 +159,13 @@ public class ShareView: UIView {
         return footerView
     }
     
-    func cancelButtonClicked() {
+    @objc func cancelButtonClicked() {
         let indexPath = IndexPath(row: 0, section: 0)
         self.clickedHandler?(self, indexPath)
         dismiss()
     }
     
-    func backgroundViewClicked() {
+    @objc func backgroundViewClicked() {
         let indexPath = IndexPath(row: 0, section: 0)
         self.clickedHandler?(self, indexPath)
         dismiss()

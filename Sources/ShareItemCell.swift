@@ -59,7 +59,7 @@ class ShareItemCell: UICollectionViewCell {
     }
     
     // MARK: Action
-    func iconButtonClick() {
+    @objc func iconButtonClick() {
         if let shareItem = shareItem, let selectionHandler = shareItem.selectionHandler {
             selectionHandler(shareItem)
         }
