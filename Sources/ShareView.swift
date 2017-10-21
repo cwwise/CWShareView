@@ -25,22 +25,22 @@ public typealias ShareViewClickedHandler = ((ShareView, IndexPath) -> Void)
 
 public class ShareView: UIView {
     
-    fileprivate var shareItems: [Any] = []
+    private var shareItems: [Any] = []
     
     /// header
     public var headerView: UIView?
     
-    fileprivate var containerView: UIView
+    private var containerView: UIView
     
     public var footerView: UIView?
     
     public var collectionViewLayout: UICollectionViewFlowLayout!
 
-    fileprivate var backgroundView: UIView
+    private var backgroundView: UIView
     
-    fileprivate var collectionView: UICollectionView!
+    private var collectionView: UICollectionView!
     
-    fileprivate var type: ShareViewType = .normal
+    private var type: ShareViewType = .normal
             
     public var animationDuration: TimeInterval
     /// 点击事件
